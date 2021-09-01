@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  height: 2rem;
+  background-color: black;
+  color: white;
+}
+
+#left-span {
+  color:red;
+}

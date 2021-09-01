@@ -41,7 +41,8 @@
 .title a:hover,
 .title a:focus,
 .title a:active {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #00cff3;
 }
 
 .title {

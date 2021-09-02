@@ -21,14 +21,15 @@ export default function ParticleCloudCanvas() {
           particles: {
             color: {
               value: [
-                '#ff0000',
-                '#0000ff',
+                // '#ff0000',
+                // '#0000ff',
+                '#fff'
               ]
             },
             links: {
-              enable: false,
-              color: '#ffffff',
-              distance: 150,
+              enable: true,
+              color: '#000000',
+              distance: 300,
               opacity: 0.5,
               width: 1
             },
@@ -39,22 +40,24 @@ export default function ParticleCloudCanvas() {
               enable: true,
               direction: 'none',
               outModes: {
-                default: 'out',
+                default: 'bounce',
                 bottom: 'bounce'
               },
               random: true,
-              speed: 0.6,
+              speed: 3,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                value_area: 800
+                value_area: 500
               },
-              value: 5
+              // value: 250
+              value: 50,
+              limit: 25
             },
             opacity: {
-              value: 0.1
+              value: 1
             },
             shape: {
               type: 'circle'
@@ -62,12 +65,12 @@ export default function ParticleCloudCanvas() {
             size: {
               random: {
                 enable: true,
-                minimumValue: 150,
+                minimumValue: 1,
               },
-              value: 300
+              value: 1
             },
             shadow: {
-              enable: true,
+              enable: false,
               blur: 100,
               color: {
                 value: [
@@ -76,10 +79,6 @@ export default function ParticleCloudCanvas() {
                   '#0000ff',
                 ]
               },
-              // offset: {
-              //   x: 50,
-              //   y: 50
-              // }
             }
           },
           detectRetina: true
@@ -88,50 +87,3 @@ export default function ParticleCloudCanvas() {
     </>
   )
 }
-
-  // // {
-  // //   speed: 0.2,
-  // //   maxParticles: 100,
-  // //   selector: ".particles",
-  // //   color: ["#f58220", "#d28645", "#dddddd"],
-  // //   connectParticles: true,
-  // // }
-
-  // useEffect(() => {
-  //   const particleConfig = {
-  //     selector: '.particles',
-  //     maxParticles: 10,
-  //     sizeVariations: 500,
-  //     speed: 0.5,
-  //     color: [
-  //       '#ff0000',
-  //       '#00ff00',
-  //       '#0000ff',
-  //     ],
-  //     minDistance: 20,
-  //     connectParticles: false,
-  //     responsive: [
-  //       {
-  //         breakpoint: 300,
-  //         options: {
-  //           color: '#ff0000',
-  //           maxParticles: 200,
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 600,
-  //         options: {
-  //           color: "#00ff00",
-  //           maxParticles: 600,
-  //         },
-  //       },
-  //     ],
-  //   }
-
-  //   const instance = new ParticleCloud(particleConfig)
-  //   instance.start()
-
-  //   return () => instance.destroy()
-  // }, [])
-
-  // return <canvas className="particles"></canvas>

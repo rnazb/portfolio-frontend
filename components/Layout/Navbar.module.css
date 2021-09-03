@@ -41,7 +41,8 @@
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: red;
+  text-decoration: none;
+  color: #3fd0c9;
 }
 
 @media(max-width: 653px) {

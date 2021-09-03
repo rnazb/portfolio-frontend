@@ -23,12 +23,12 @@ export default function ParticleCloudCanvas() {
               value: [
                 // '#ff0000',
                 // '#0000ff',
-                '#fff'
+                'transparent'
               ]
             },
             links: {
               enable: true,
-              color: '#000000',
+              color: '#ffffff',
               distance: 300,
               opacity: 0.5,
               width: 1

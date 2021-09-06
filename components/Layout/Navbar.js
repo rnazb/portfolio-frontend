@@ -6,20 +6,22 @@ function Navbar() {
 
   return (
     <header className={styles.header}>
-      {/* <div className={styles.logo}>React Meetups</div> */}
+      <div className={styles.logo}>
+        <Link href='/'>Rey Nazareno</Link>
+      </div>
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link href='/'>Porftolio</Link>
+            <Link href='/portfolio'>Porftolio</Link>
           </li>
           <li>
-            <Link href='/'>Blog</Link>
+            <Link href='/blog'>Blog</Link>
           </li>
           <li>
-            <Link href='/'>About Me</Link>
+            <Link href='/about'>About Me</Link>
           </li>
           <li>
-            <Link href='/'>Contact</Link>
+            <Link href='/contact'>Contact</Link>
           </li>
         </ul>
       </nav>

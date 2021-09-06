@@ -13,7 +13,9 @@
 }
 
 .logo {
-  font-size: 2rem;
+  margin-left: 3rem;
+  margin-right: auto;
+  font-size: 1rem;
   color: white;
   font-weight: bold;
 }
@@ -52,5 +54,10 @@
 
   .header a {
     font-size: 0.6rem;
+  }
+
+  .logo {
+    margin-left: 0.4rem;
+    font-size: 0.8rem;
   }
 }

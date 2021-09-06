@@ -3,6 +3,10 @@ import { Container, Row, Col, Card } from 'react-bootstrap'
 import PageCard from '../components/UI/PageCard'
 import styles from './index.module.css'
 
+import GithubSocial from '../public/github.svg'
+import LinkedinSocial from '../public/linkedin.svg'
+import MailSocial from '../public/mail.svg'
+
 import MongodbSVG from '../public/icons/mongodb.svg'
 import ExpressSVG from '../public/icons/express-109.svg'
 import ReactSVG from '../public/icons/react-js.svg'
@@ -45,11 +49,39 @@ export default function Home() {
             md={{ span: 6, order: 1 }}
           >
             <Card.Body>
-              <Card.Title className="ml-5 text-center">Card Title</Card.Title>
+              <Card.Title className="ml-5 text-center">Hi! Nice to meet you!</Card.Title>
               <Card.Text className="ml-5">
-                Some quick example text to build on the card title and make up the bulk of
-                the cards content.
+                Some quick example text to build on the card title and make up the bulk of the cards content.
               </Card.Text>
+              <Card.Text className="ml-5">
+                Some quick example text to build on the card title and make up the bulk of the cards content.
+              </Card.Text>
+              <Card.Text className="ml-5">
+                Some quick example text to build on the card title and make up the bulk of the cards content.
+              </Card.Text>
+              <div className={styles['icon-container']}>
+                <a
+                  href="https://github.com/rnazb"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <GithubSocial className={styles['social-icon']} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/rey-nazareno/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <LinkedinSocial className={styles['social-icon']} />
+                </a>
+                <a
+                  href="mailto:r.nazbat@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <MailSocial className={styles['social-icon']} />
+                </a>
+              </div>
             </Card.Body>
           </Col>
           <Col

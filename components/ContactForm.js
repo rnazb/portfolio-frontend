@@ -6,7 +6,7 @@ export default function ContactForm() {
       <input type="text" placeholder="First Name" />
       <input type="text" placeholder="Last Name" />
       <input type="text" placeholder="Email" />
-      <textarea placeholder="Message" rows="5" />
+      <textarea placeholder="Message" rows="7" />
     </form>
   )
 }

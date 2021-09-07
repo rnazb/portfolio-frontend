@@ -35,7 +35,7 @@
 .pic-wrapper {
   display: flex;
   justify-content: center;
-  margin: 15% 2rem auto 2rem;
+  margin: 10% 2rem auto 2rem;
 }
 
 .profile-pic {
@@ -82,10 +82,20 @@
   margin: 1rem;
 }
 
+.social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
 .social-icon {
   height: 1.5rem;
   width: 6rem;
-  margin: 1rem;
 }
 
 .social-icon:hover {

@@ -4,8 +4,7 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <span id={styles['left-span']}>Footer item</span>
-      <span>Footer item</span>
+      <span>2021 &copy; Rey Nazareno</span>
     </footer>
   );
 }

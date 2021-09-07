@@ -1,8 +1,6 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
-import styles from './Layout.module.css';
-import Container from 'react-bootstrap/container'
-import ParticleCloudCanvas from '../ParticleCloudCanvas';
+import Navbar from './Navbar'
+import styles from './Layout.module.css'
+import ParticleCloudCanvas from '../ParticleCloudCanvas'
 
 function Layout(props) {
   return (
@@ -10,7 +8,6 @@ function Layout(props) {
       <Navbar />
       <ParticleCloudCanvas />
       <main className={styles.main}>{props.children}</main>
-      {/* <Footer /> */}
     </>
   );
 }

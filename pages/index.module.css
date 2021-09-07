@@ -42,22 +42,13 @@
   border-radius: 50%;
 }
 
-@media (max-width: 640px) {
-  .title {
-    font-size: 2rem;
-  }
+.contact-details {
+  margin: 1rem 0;
+  text-align: center;
 }
 
-@media (min-width: 641px) {
-  .title {
-    font-size: 4rem;
-  }
-}
-
-@media (min-width: 771px) {
-  .title {
-    font-size: 6rem;
-  }
+.contact-detail {
+  margin: 0;
 }
 
 .button {
@@ -99,4 +90,22 @@
 
 .social-icon:hover {
   cursor: pointer
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 771px) {
+  .title {
+    font-size: 6rem;
+  }
 }

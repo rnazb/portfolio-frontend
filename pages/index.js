@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import PageCard from '../components/UI/PageCard'
+import ContactForm from '../components/ContactForm'
+
 import styles from './index.module.css'
 
 import GithubSocial from '../public/github.svg'
@@ -98,6 +100,14 @@ export default function Home() {
                 alt=""
               />
             </div>
+            <div className={styles['contact-details']}>
+              <p className={styles['contact-detail']}>
+                Email: <u>r.nazbat@gmail.com</u>
+              </p>
+              <p className={styles['contact-detail']}>
+                Mobile: <u>+63 (939) 928 5412</u>
+              </p>
+            </div>
           </Col>
         </Row>
       </PageCard>
@@ -135,10 +145,7 @@ export default function Home() {
       <PageCard>
         <Card.Body>
           <Card.Title className="mx-5 text-center">Get in Touch</Card.Title>
-          <Card.Text className="mx-5">
-            Some quick example text to build on the card title and make up the bulk of
-            the cards content.
-          </Card.Text>
+          <ContactForm />
         </Card.Body>
       </PageCard>
     </>

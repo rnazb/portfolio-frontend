@@ -66,11 +66,11 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params, preview = null }) {
+export async function getStaticProps({ params }) {
   const articles = await fetchAPI(`/articles?slug=${params.slug}`)
 
   return {
     props: { article: articles[0] },
-    revalidate: 1,
+    revalidate: 10,
   };
 }

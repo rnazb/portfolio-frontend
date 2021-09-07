@@ -20,3 +20,8 @@
 .article-title {
   color: #3fd0c9;
 }
+
+.article-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

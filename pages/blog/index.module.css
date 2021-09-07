@@ -9,3 +9,26 @@
   color: #ffffff;
   margin-top: 2rem;
 }
+
+.article {
+  margin-bottom: 3rem;
+}
+
+.article-image {
+  margin-top: 3rem;
+}
+
+.article-title {
+  margin: 2rem 2rem 0 2rem;
+  color: #ededed;  
+}
+
+.article-content h1 {
+  margin: 0 2rem 1rem 2rem;
+  color: #ededed;
+}
+
+.article-content p {
+  margin: 1rem 2rem 2rem 2rem;
+  color: #ededed;
+}

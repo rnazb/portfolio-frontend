@@ -65,7 +65,7 @@ export default function Home({ homepage }) {
               md={{ span: 7, order: 1 }}
             >
               <Card.Body>
-                <h5 className={styles['about-title']}>Hi! Nice to meet you!</h5>
+                <h3 className={styles['about-title']}>Hi! Nice to meet you!</h3>
                 <p className={styles['about-para']}>
                   My name is Rey Nazareno and I am a fullstack javascript developer. MERN is my stack of choice (MongoDB, Express, React, and Node.js) for developing progressive web applications.
                 </p>

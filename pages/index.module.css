@@ -27,10 +27,41 @@
 }
 
 .name {
-  font-weight: bormal;
+  font-weight: bold;
   font-size: 3rem;
   z-index: 8;
 }
+
+.about-para {
+  margin: 0 0 1rem 5rem;
+}
+
+.about-title {
+  text-align: center;
+  color: #ffffff;
+  margin: 2rem auto;
+}
+
+@media (max-width: 991px) {
+  .about-para {
+    margin: 0 0 1rem 2rem;
+  }
+
+  .about-title {
+    margin: 1rem auto 2rem auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-para {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .about-title {
+    margin: 0 auto 2rem auto;
+  }
+}
+
 
 .pic-wrapper {
   display: flex;

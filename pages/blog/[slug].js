@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 
 import styles from './index.module.css'
 
-export default function BlogPost() {
+export default function Article() {
   const router = useRouter()
 
   return (

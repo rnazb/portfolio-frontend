@@ -1,0 +1,22 @@
+.image-wrapper {
+  min-width: 16rem;
+  height: 100%;
+}
+.image-wrapper img {
+  width: auto;
+  height: 100%;
+}
+
+.article-card-image {
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .article-row {
+    min-height: 14rem;
+  }
+}
+
+.article-title {
+  color: #3fd0c9;
+}

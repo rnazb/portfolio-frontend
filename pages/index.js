@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import PageCard from '../components/UI/PageCard'
 import ContactForm from '../components/ContactForm'
+import Seo from '../components/Seo'
+import { fetchAPI } from '../lib/api'
 
 import styles from './index.module.css'
 
@@ -28,13 +30,14 @@ import HubspotSVG from '../public/icons/hubspot.svg'
 import ActiveCampaignSVG from '../public/icons/activecampaign-1.svg'
 import FacebookAdsSVG from '../public/icons/facebook-ads.svg'
 
-export default function Home() {
+export default function Home({ homepage }) {
   const formRef = useRef(null)
 
   const scrollClickHandler = () => formRef.current.scrollIntoView()
 
   return (
     <>
+      <Seo seo={homepage.seo} />
       <Container>
         <Row className="px-0 mx-0 w-100">
           <Container className={styles['main-header-container']}>
@@ -59,24 +62,21 @@ export default function Home() {
           <Row>
             <Col
               xs={{ span: 12, order: 2 }}
-              md={{ span: 6, order: 1 }}
+              md={{ span: 7, order: 1 }}
             >
               <Card.Body>
-                <Card.Title className="mx-5 text-center">Hi! Nice to meet you!</Card.Title>
-                <Card.Text className="mx-5">
-                  Some quick example text to build on the card title and make up the bulk of the cards content.
-                </Card.Text>
-                <Card.Text className="mx-5">
-                  Some quick example text to build on the card title and make up the bulk of the cards content.
-                </Card.Text>
-                <Card.Text className="mx-5">
-                  Some quick example text to build on the card title and make up the bulk of the cards content.
-                </Card.Text>
+                <h5 className={styles['about-title']}>Hi! Nice to meet you!</h5>
+                <p className={styles['about-para']}>
+                  My name is Rey Nazareno and I am a fullstack javascript developer. MERN is my stack of choice (MongoDB, Express, React, and Node.js) for developing progressive web applications.
+                </p>
+                <p className={styles['about-para']}>
+                  Originally, I helped my clients through digital marketing, implementing a full-suite of marketing automation, performance marketing, and content development services. Now I leverage that experience along with my knowledge of programming to develop modern software solutions.
+                </p>
               </Card.Body>
             </Col>
             <Col
               xs={{ span: 12, order: 1 }}
-              md={{ span: 6, order: 2 }}
+              md={{ span: 5, order: 2 }}
             >
               <div className={styles['pic-wrapper']}>
                 <Image
@@ -174,4 +174,13 @@ export default function Home() {
       </Container>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // Run API calls in parallel
+  const homepage = await fetchAPI('/homepage')
+  return {
+    props: { homepage },
+    revalidate: 10,
+  }
 }

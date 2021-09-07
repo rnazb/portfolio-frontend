@@ -1,10 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'tailwindui.com',
-      'images.unsplash.com'
-    ],
+    domains: ['localhost:1337']
   }
 }
 

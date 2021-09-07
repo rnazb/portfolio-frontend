@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+
 import Image from 'next/image'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import PageCard from '../components/UI/PageCard'
@@ -27,6 +29,9 @@ import ActiveCampaignSVG from '../public/icons/activecampaign-1.svg'
 import FacebookAdsSVG from '../public/icons/facebook-ads.svg'
 
 export default function Home() {
+  const formRef = useRef(null)
+
+  const scrollClickHandler = () => formRef.current.scrollIntoView()
 
   return (
     <>
@@ -39,7 +44,12 @@ export default function Home() {
                 <span>Development</span>
               </h1>
             </div>
-            <button className={styles.button}>Click</button>
+            <button
+              className={styles.button}
+              onClick={scrollClickHandler}
+            >
+              Get in Touch
+            </button>
           </Container>
         </Row>
       </Container>
@@ -150,7 +160,7 @@ export default function Home() {
             </Container>
           </Col>
 
-          <Col className="px-0 mb-4">
+          <Col className="px-0 mb-4" ref={formRef}>
             <Container className="h-100">
               <PageCard>
                 <Card.Body>

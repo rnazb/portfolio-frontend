@@ -9,3 +9,13 @@
   color: #ffffff;
   margin-top: 2rem;
 }
+
+.container {
+  width: 50%;
+}
+
+@media (max-width: 630px) {
+  .container {
+    width: 80%;
+  } 
+}

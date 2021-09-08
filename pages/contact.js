@@ -7,7 +7,7 @@ import styles from './contact.module.css'
 export default function Contact() {
   return (
     <div className={styles.page}>
-      <Container className="w-50">
+      <Container className={styles.container}>
         <PageCard>
           <h1 className={styles['page-title']}>Contact Page</h1>
           <ContactForm />

@@ -19,7 +19,7 @@ const ArticleCard = ({ article }) => {
             unoptimized={true}
             className={styles['article-card-image']}
             src={imageUrl}
-            alt={article.image.alternativeText || article.image.name}
+            alt={article.image?.alternativeText || article.image?.name}
             layout={'fill'}
             objectFit={'cover'}
           />

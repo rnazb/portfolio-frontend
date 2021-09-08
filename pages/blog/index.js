@@ -6,6 +6,7 @@ import { fetchAPI } from '../../lib/api'
 import styles from './index.module.css'
 
 export default function Blog({ articles }) {
+
   return (
     <div className={styles.page}>
       <Container>
@@ -24,6 +25,6 @@ export async function getStaticProps() {
 
   return {
     props: { articles },
-    revalidate: 10,
+    revalidate: 1,
   };
 }

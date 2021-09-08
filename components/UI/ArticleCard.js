@@ -28,7 +28,7 @@ const ArticleCard = ({ article }) => {
           <div>
             <Link
               as={`/blog/${article.slug}`}
-              href="/blog/[id]"
+              href="/blog/[slug]"
               passHref={true}
             >
               <h3 className={styles['article-title']}>

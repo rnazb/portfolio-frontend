@@ -5,13 +5,14 @@ import { fetchAPI } from '../../lib/api'
 
 import styles from './index.module.css'
 
-export default function Blog({ articles }) {
+export default function BlogPage({ articles }) {
 
   return (
     <div className={styles.page}>
       <Container>
         <PageCard>
-          <h1 className={styles['page-title']}>Blog Page</h1>
+          <h1 className={styles['page-title']}>Blog</h1>
+          <p className={styles.disclaimer}><em>*These articles are the default works from integrating Strapi.io&apos;s content management system and remain here for demo puproses. All credits go to the original authors and creators. My own content is soon to follow ;) - Rey</em></p>
           <Articles articles={articles} />
         </PageCard>
       </Container>
@@ -26,5 +27,5 @@ export async function getStaticProps() {
   return {
     props: { articles },
     revalidate: 1,
-  };
+  }
 }

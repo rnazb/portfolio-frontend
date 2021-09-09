@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import { getStrapiMedia } from '../../lib/media'
 import { Container, Row, Col } from 'react-bootstrap'
 import styles from './ArticleCard.module.css'

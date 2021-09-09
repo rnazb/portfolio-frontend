@@ -1,0 +1,32 @@
+.image-wrapper {
+  min-width: 16rem;
+  height: 100%;
+}
+.image-wrapper img {
+  width: auto;
+  height: 100%;
+}
+
+.portfolio-card-image {
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .portfolio-row {
+    min-height: 14rem;
+  }
+}
+
+.portfolio-title {
+  padding: 1rem 0;
+  color: #3fd0c9;
+}
+
+.portfolio-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.portfolio-description {
+  padding-bottom: 1rem;
+}

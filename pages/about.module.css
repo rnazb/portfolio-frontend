@@ -22,6 +22,10 @@
   width: 6rem;
 }
 
+.body-container {
+  margin-bottom: 1rem;
+}
+
 .about-para {
-  margin: 0 3rem 2rem 3rem;
+  margin: 0 3rem 1rem 3rem;
 }

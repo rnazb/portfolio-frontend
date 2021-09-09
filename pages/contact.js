@@ -9,7 +9,7 @@ export default function Contact() {
     <div className={styles.page}>
       <Container className={styles.container}>
         <PageCard>
-          <h1 className={styles['page-title']}>Contact Page</h1>
+          <h1 className={styles['page-title']}>Contact Me</h1>
           <ContactForm />
         </PageCard>
       </Container>

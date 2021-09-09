@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getStrapiMedia } from '../../lib/media'
+import ReactMarkdown from 'react-markdown'
 import { Container, Row, Col } from 'react-bootstrap'
 import styles from './PortfolioCard.module.css'
 
@@ -31,7 +32,11 @@ const PortfolioCard = ({ item }) => {
                 {item.Title}
               </h3>
             </Link>
-            <p className={styles['portfolio-description']}>{item.Description}</p>
+            <p className={styles['portfolio-description']}>
+              <ReactMarkdown>
+                {item.Description}
+              </ReactMarkdown>
+            </p>
           </div>
         </Col>
       </Row>

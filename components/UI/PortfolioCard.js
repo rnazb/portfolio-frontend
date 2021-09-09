@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import styles from './PortfolioCard.module.css'
 
 const PortfolioCard = ({ item }) => {
-  console.log(item)
+
   return (
     <Container className="mb-4">
       <Row className={styles['portfolio-row']}>
@@ -13,8 +13,8 @@ const PortfolioCard = ({ item }) => {
           <Image
             unoptimized={true}
             className={styles['portfolio-card-image']}
-            src={item.Screenshots[1].url}
-            alt={item.Screenshots[1]?.alternativeText || item.Screenshots[1]?.name}
+            src={item.Screenshots[0].url}
+            alt={item.Screenshots[0]?.alternativeText || item.Screenshots[0]?.name}
             layout={'fill'}
             objectFit={'contain'}
           />

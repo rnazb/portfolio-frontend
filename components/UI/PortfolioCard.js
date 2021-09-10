@@ -23,15 +23,15 @@ const PortfolioCard = ({ item }) => {
 
         <Col xs={{ span: 12, order: 2 }} md={{ span: 6 }}>
           <div>
-            <Link
+            {/* <Link
               as={`/portfolio/${item.Slug}`}
               href="/portfolio/[slug]"
               passHref={true}
-            >
-              <h3 className={styles['portfolio-title']}>
-                {item.Title}
-              </h3>
-            </Link>
+            > */}
+            <h3 className={styles['portfolio-title']}>
+              {item.Title}
+            </h3>
+            {/* </Link> */}
             <p className={styles['portfolio-description']}>
               <ReactMarkdown>
                 {item.Description}

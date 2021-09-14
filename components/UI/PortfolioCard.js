@@ -14,29 +14,26 @@ const PortfolioCard = ({ item }) => {
           <Image
             unoptimized={true}
             className={styles['portfolio-card-image']}
-            src={item.Screenshots[0].url}
-            alt={item.Screenshots[0]?.alternativeText || item.Screenshots[0]?.name}
+            src={item.screenshots[0].url}
+            alt={item.screenshots[0]?.alternativeText || item.screenshots[0]?.name}
             layout={'fill'}
             objectFit={'contain'}
           />
         </Col>
 
         <Col xs={{ span: 12, order: 2 }} md={{ span: 6 }}>
-          <div>
+          <div className={styles['portfolio-description']}>
             {/* <Link
               as={`/portfolio/${item.Slug}`}
               href="/portfolio/[slug]"
               passHref={true}
             > */}
             <h3 className={styles['portfolio-title']}>
-              {item.Title}
+              {item.title}
             </h3>
-            {/* </Link> */}
-            <p className={styles['portfolio-description']}>
-              <ReactMarkdown>
-                {item.Description}
-              </ReactMarkdown>
-            </p>
+            <ReactMarkdown>
+              {item.description}
+            </ReactMarkdown>
           </div>
         </Col>
       </Row>

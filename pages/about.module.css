@@ -26,6 +26,10 @@
   margin-bottom: 1rem;
 }
 
-.about-para {
+.body-container p {
   margin: 0 3rem 1rem 3rem;
 }
+
+/* .about-para {
+  margin: 0 3rem 1rem 3rem;
+} */

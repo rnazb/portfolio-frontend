@@ -7,12 +7,12 @@ export default function PortfolioItem({ item }) {
 
 
   const router = useRouter()
-  if (!router.isFallback && !item?.Slug) {
+  if (!router.isFallback && !item?.slug) {
     return <ErrorPage statusCode={404} />
   }
 
   return (
-    <h1>Portfolio Item: {item.Title}</h1>
+    <h1>Portfolio Item: {item.title}</h1>
   )
 }
 
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
   return {
     paths: portfolio.map((item) => ({
       params: {
-        slug: item.Slug,
+        slug: item.slug,
       },
     })),
     fallback: false
@@ -30,10 +30,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const portfolio = await fetchAPI(`/portfolio?Slug=${params.slug}`)
+  const portfolio = await fetchAPI(`/portfolio?slug=${params.slug}`)
 
   return {
-    props: { portfolio: portfolio[0] },
+    props: { item: portfolio[0] },
     revalidate: 10,
   }
 }

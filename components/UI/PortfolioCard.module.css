@@ -27,6 +27,10 @@
   cursor: pointer;
 }
 
-.portfolio-description {
+.portfolio-description a {
+  color: #ffffff;
+}
+
+.portfolio-description p {
   padding-bottom: 1rem;
 }

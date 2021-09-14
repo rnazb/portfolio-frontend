@@ -1,6 +1,10 @@
-import PortfolioCard from './UI/PortfolioCard'
+// import PortfolioCard from './UI/PortfolioCard'
 import { Container } from 'react-bootstrap'
 import styles from './Portfolio.module.css'
+
+import dynamic from 'next/dynamic'
+
+const PortfolioCard = dynamic(() => import('./UI/PortfolioCard'))
 
 const Portfolio = ({ portfolio }) => {
 

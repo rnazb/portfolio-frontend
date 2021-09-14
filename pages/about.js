@@ -28,8 +28,7 @@ export default function About({ data }) {
 }
 
 export async function getStaticProps() {
-  const fetch = await fetchAPI('/about')
-  const data = JSON.stringify(fetch)
+  const data = await fetchAPI('/about')
 
   return {
     props: { data },

@@ -1,4 +1,5 @@
 import App from "next/app"
+import Script from "next/script"
 import { useRouter } from "next/router"
 import { createContext, useEffect } from "react"
 import { getStrapiMedia } from "../lib/media"
@@ -32,6 +33,24 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <GlobalContext.Provider value={global}>
         <Layout>
           <Component {...pageProps} />
